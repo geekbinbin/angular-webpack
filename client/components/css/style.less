@@ -1,0 +1,55 @@
+@charset 'utf-8';
+
+/*@import './sprite.less';*/
+@import './space.less';
+@import './color.less';
+
+/*.sprites(@spritesheet-sprites);*/
+
+html, body {
+    height: 100%;
+}
+body {
+    background-color: @defaultBackColor;
+    font-size: 13px;
+}
+.icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+#main {
+    .row {
+        margin: 0;
+    }
+    .wrapper, .panel {
+        padding: @defaultSpace @midSpace;
+        margin: 0;
+    }
+    .top-space {
+        margin-top: @defaultSpace;
+    }
+    .top-mini-space {
+        margin-top: @miniSpace;
+    }
+    .panel-card {
+        margin-left: -@miniSpace;
+    }
+    .card {
+        padding: 0;
+        >div {
+            margin-left: @miniSpace;
+            margin-bottom: @miniSpace;
+            background-color: @white;
+            padding: @miniSpace @midSpace;
+        }
+    }
+}
+.btn-primary {
+    background-color: @primaryButton;
+    &:hover, &:focus {
+        background-color: @primaryButton / 0.7;
+    }
+    &:active {
+        background-color: @primaryButton / 0.9;
+    }
+}
